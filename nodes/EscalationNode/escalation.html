@@ -1,0 +1,47 @@
+<script type="text/javascript">
+    RED.nodes.registerType('escalation',{
+        category: 'uNodes',
+        color: '#76e045',
+        defaults: {
+            name: {value:""},
+            warnlow: {value:""},
+            warnhigh: {value:""},
+            errorlow: {value:""},
+            errorhigh: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+      
+        label: function() {
+            return this.name||"escalation";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="escalation">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    
+    <div class="form-row">
+        <label for="node-input-warnlow"><i class="icon-tag"></i> Warn (low):</label>
+        <input type="text" id="node-input-warnlow">
+    </div>
+    <div class="form-row">
+        <label for="node-input-warnhigh"><i class="icon-tag"></i> Warn (high):</label>
+        <input type="text" id="node-input-warnhigh">
+    </div>
+    <div class="form-row">
+        <label for="node-input-errorlow"><i class="icon-tag"></i> Error (low):</label>
+        <input type="text" id="node-input-errorlow">
+    </div>
+    <div class="form-row">
+        <label for="node-input-errorhigh"><i class="icon-tag"></i> Error (high):</label>
+        <input type="text" id="node-input-errorhigh">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="escalation">
+    <p>Converting values to warn, error or nothing-level.</p>
+</script>
