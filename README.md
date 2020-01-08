@@ -10,4 +10,5 @@ A node which allows you to classify meassurement to three levels:
 Not published to npm, yet.
 
 
-chromium://flags
+[flags](chromium://flags)
+[gpu](chromium://gpu)
